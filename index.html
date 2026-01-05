@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakshitha KJ | Resume Portfolio</title>
+
+  <!-- ===== THEME & STYLES ===== -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --primary:#6366f1;   /* Indigo */
+      --accent:#22c55e;
+    }
+
+    body.light{
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --primary:#2563eb;
+      --accent:#16a34a;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;
+      background:var(--bg);
+      color:var(--text);
+      transition:background .3s,color .3s;
+    }
+
+    header{
+      position:sticky; top:0; z-index:10;
+      background:rgba(0,0,0,.3);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      max-width:1100px; margin:auto;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 20px;
+    }
+
+    .nav a{margin-left:16px; color:var(--text); text-decoration:none}
+    .nav a:hover{color:var(--primary)}
+
+    .toggle{
+      border:none; cursor:pointer;
+      background:var(--primary); color:white;
+      padding:6px 10px; border-radius:8px;
+    }
+
+    .container{max-width:1100px; margin:auto; padding:40px 20px}
+
+    h1{font-size:44px}
+    h2{color:var(--primary)}
+
+    .card{
+      background:var(--card);
+      border-radius:16px;
+      padding:22px;
+      margin-bottom:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
+      animation:fadeUp .8s ease both;
+    }
+
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px}
+
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:10px;
+      background:var(--primary);
+      color:white;
+      text-decoration:none;
+      margin-top:10px;
+    }
+
+    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+
+    .bar{height:8px; background:#e5e7eb; border-radius:999px; overflow:hidden}
+    .bar span{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--accent),var(--primary)); transition:width 1.2s}
+
+    footer{text-align:center; color:var(--muted)}
+
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(20px)}
+      to{opacity:1; transform:none}
+    }
+
+    @media(max-width:900px){
+      .hero,.grid{grid-template-columns:1fr}
+    }
+  /* Typing animation */
+    .typing{border-right:2px solid var(--primary); white-space:nowrap; overflow:hidden; animation:blink .7s infinite}
+    @keyframes blink{50%{border-color:transparent}}
+  </style>
+</head>
+
+<body class="light">
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="nav">
+    <strong>Rakshitha KJ</strong>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      
+    </nav>
+  </div>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="card">
+      <h1>Hi, I'm Rakshitha 👋</h1>
+      <h3 class="typing" id="typing"></h3>
+      <p>Aspiring Full-Stack Developer focused on Web, Python & real-world problem solving.</p>
+      <a class="btn" href="#contact">Hire Me</a>
+    </div>
+    <div class="card">
+      <h3>Quick Info</h3>
+      <ul>
+        <li>🎓 Fresher / Graduate</li>
+        <li>💻 HTML, CSS, JavaScript, Python</li>
+        <li>📍 India</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>I am a passionate developer preparing for software roles. I enjoy building clean UI, solving problems, and learning modern technologies.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div>HTML<div class="bar"><span data-val="90"></span></div></div>
+      <div>CSS<div class="bar"><span data-val="85"></span></div></div>
+      <div>JavaScript<div class="bar"><span data-val="80"></span></div></div>
+      <div>Python<div class="bar"><span data-val="75"></span></div></div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="card">
+    <h2>ATS-Optimized Resume Snapshot</h2>
+    <p><strong>Role:</strong> Software Developer / Full-Stack Developer</p>
+    <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python, SQL, Git, GitHub</p>
+    <p><strong>Education:</strong> Bachelor's Degree</p>
+    <p><strong>Keywords:</strong> Web Development, Problem Solving, OOP, Data Structures</p>
+    <button class="btn" onclick="window.print()">Download Resume (PDF)</button>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Jarvis Assistant:</strong> Python voice assistant with GUI</li>
+      <li><strong>Portfolio Website:</strong> Responsive personal site</li>
+      <li><strong>Data Analysis:</strong> Python-based EDA projects</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xyzzabcd" method="POST">
+      <input name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin:6px 0">
+      <input name="email" type="email" placeholder="Email" required style="width:100%;padding:10px;margin:6px 0">
+      <textarea name="message" placeholder="Message" required style="width:100%;padding:10px;margin:6px 0"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+    <p class="muted">(Form works via Formspree – no backend needed)</p>
+  </section>
+
+</main>
+
+<footer class="container">
+  © <span id="year"></span> Rakshitha KJ | Hosted on GitHub Pages
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  // Skill bar animation
+  document.querySelectorAll('.bar span').forEach(bar=>{
+    bar.style.width = bar.dataset.val + '%';
+  });
+
+  
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Typing effect
+  const text = "Full-Stack Developer | Python Enthusiast | Fresher";
+  let i = 0;
+  function type(){
+    if(i < text.length){
+      document.getElementById('typing').textContent += text.charAt(i);
+      i++; setTimeout(type,80);
+    }
+  }
+  type();
+</script>
+
+</body>
+</html>
